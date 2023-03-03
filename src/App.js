@@ -11,8 +11,8 @@ import './App.css';
 
 
 const initialState = {
-  input: 'https://abonmassip.dev/img/face-recognition.jpg',
-  imageUrl: 'https://abonmassip.dev/img/face-recognition.jpg',
+  input: '',
+  imageUrl: '',
   boxes: [],
   route: 'signin',
   isSignedIn: false,
@@ -68,6 +68,10 @@ class App extends React.Component {
     this.setState({input: event.target.value});
   }
 
+  onSampleImage = () => {
+    this.setState({input: 'https://abonmassip.dev/img/face-recognition.jpg'});
+  }
+
   onPictureSubmit = () => {
     this.setState({imageUrl: this.state.input});
     this.setState({boxes: []});
@@ -118,6 +122,7 @@ class App extends React.Component {
               <ImageLinkForm
                 onInputChange={this.onInputChange}
                 onPictureSubmit={this.onPictureSubmit}
+                onSampleImage={this.onSampleImage}
                 input={this.state.input}
               />
               <FaceRecognition boxes={boxes} imageUrl={imageUrl} />
