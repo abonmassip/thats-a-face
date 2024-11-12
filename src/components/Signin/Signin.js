@@ -18,19 +18,19 @@ class Signin extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('https://busy-bass-sneakers.cyclic.app/signin', {
-      method: 'post',
-      headers: {'Content-Type': 'application/json'},
+    fetch("https://thats-a-face-api-vercel.vercel.app/signin", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: this.state.signInEmail,
-        password: this.state.signInPassword
-      })
+        password: this.state.signInPassword,
+      }),
     })
-      .then(response => response.json())
-      .then(user => {
+      .then((response) => response.json())
+      .then((user) => {
         if (user.id) {
           this.props.loadUser(user);
-          this.props.onRouteChange('home');
+          this.props.onRouteChange("home");
         }
       });
   }
