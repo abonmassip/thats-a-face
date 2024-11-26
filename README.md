@@ -9,4 +9,4 @@ Server hosted on **cyclic.sh**, database on **supabase.com** and front-end on **
 https://taupe-praline-ae8da9.netlify.app/
 
 # express.js backend server
-https://github.com/abonmassip/thats-a-face-api
+https://github.com/abonmassip/thats-a-face-api-vercel
