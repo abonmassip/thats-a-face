@@ -69,7 +69,7 @@ class App extends React.Component {
   }
 
   onSampleImage = () => {
-    this.setState({input: 'https://abonmassip.dev/img/face-recognition.jpg'});
+    this.setState({input: 'https://abonmassip.dev/images/face-recognition.jpg'});
   }
 
   onPictureSubmit = () => {
